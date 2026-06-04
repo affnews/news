@@ -10,9 +10,8 @@ import HeaderLink from './HeaderLink.astro';
 	</a>
 
 	<div class="internal-links">
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/tools">Tools</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
 	</div>
 </nav>
 </header>
@@ -43,11 +42,12 @@ import HeaderLink from './HeaderLink.astro';
 
 .logo {
 	flex-shrink: 0;
+	min-width: 180px;
 }
 
 .logo img {
 	height: 55px;
-	width: auto;
+	min-width: 180px;
 	display: block;
 	min-height: 55px;
 }
