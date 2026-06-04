@@ -11,6 +11,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
      crossorigin="anonymous"></script>
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "411ffbd5-eced-477f-91d4-e5d65b8a46f7",
+    });
+  });
+</script>
 	</head>
 	<body>
 		<Header />
@@ -27,6 +36,39 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="dd69efad-aeba-4015-acf1-1389b13f787e"></script>
 		</div>
 	</section>
+<section class="blog">
+<div class='onesignal-customlink-container'></div>
+	<h2>Latest Articles</h2>
+	<p>Fresh insights, automatically updated from our blog.</p>
+
+	<div class="articles">
+		<!-- hier später dynamic Astro collection -->
+		<article>Article 1</article>
+		<article>Article 2</article>
+		<article>Article 3</article>
+	</div>
+</section>
+section class="tools">
+	<h2>Best Tools</h2>
+	<p>Hand-picked tools to get best results.</p>
+
+	<div class="tool-grid">
+
+<a href="https://www.anstrex.com/?utm_campaign=affiliate&fp_ref=leo15" target="_blank" style="outline:none;border:none;"><img src="https://d2gdx5nv84sdx2.cloudfront.net/uploads/4q7wj2yc/marketing_asset/banner/3296/300x250-2-animated.gif" alt="anstrex" border="0"/></a>" class="tool-card">
+			<h3>Anstrex</h3>
+			<p>Tool to Spy on Ads</p>
+		</a>
+
+
+	</div>
+</section>
+<section class="ad-banner">
+	<!-- Google AdSense -->
+	<div class="ad-slot">
+		<p>Advertisement</p>
+		<!-- Google Ad Script -->
+	</div>
+</section>
 </main>
 		<Footer />
 	</body>
